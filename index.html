@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EJR Robótica Educacional</title>
+<meta name="description" content="Kits de robótica e programação, aulas, assessoria e formação de professores. Plataformas EJR Hub, Jabuti Edu Nuvem e EJR Games.">
+<meta property="og:title" content="EJR Robótica Educacional">
+<meta property="og:description" content="Robótica educacional facilitando aprendizagens: kits, aulas, assessoria e formação.">
+<meta property="og:image" content="assets/img/aula-full.jpg">
+<meta name="theme-color" content="#13803A">
+<link rel="icon" href="assets/img/logo-600.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="topo">
+  <a class="topo__logo" href="#" aria-label="EJR Robótica Educacional, início">
+    <img src="assets/img/logo-600.png" alt="EJR Robótica Educacional" width="600" height="303">
+  </a>
+  <nav class="topo__nav" aria-label="Seções">
+    <a href="#servicos">O que fazemos</a>
+    <a href="#kits">Kits</a>
+    <a href="#plataformas">Plataformas</a>
+    <a href="#contato">Contato</a>
+  </nav>
+  <a class="btn btn--whats btn--sm" href="https://wa.me/5551992921288?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20EJR%20Rob%C3%B3tica." target="_blank" rel="noopener">WhatsApp</a>
+</header>
+
+<main id="conteudo">
+
+<!-- HERO: arena programável -->
+<section class="hero" aria-labelledby="hero-titulo">
+  <div class="hero__texto">
+    <p class="hero__servicos">Aulas, vendas, assessoria e formação</p>
+    <h1 id="hero-titulo">Robótica educacional facilitando aprendizagens</h1>
+    <p class="hero__lead">Antes de ler qualquer coisa, programe o robô da arena. Monte a sequência de comandos e leve ele até os três alvos. É assim que a turma aprende com a EJR.</p>
+    <div class="hero__acoes">
+      <a class="btn btn--primary" href="https://wa.me/5551992921288?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20da%20EJR%20Rob%C3%B3tica." target="_blank" rel="noopener">Pedir orçamento</a>
+      <a class="btn btn--ghost" href="#kits">Ver os kits</a>
+    </div>
+  </div>
+
+  <div class="arena" id="arena" aria-label="Arena: programe o robô">
+    <div class="arena__placar" aria-live="polite">
+      <span id="arena-status">Leve o robô aos 3 alvos</span>
+      <span class="arena__alvos" id="arena-contador">0 de 3</span>
+    </div>
+    <div class="arena__campo" id="arena-campo" role="img" aria-label="Campo 6 por 6 com o robô e três alvos">
+      <!-- grade, alvos e robô são desenhados pelo arena.js -->
+    </div>
+
+    <div class="arena__painel">
+      <div class="arena__comandos" role="group" aria-label="Comandos">
+        <button class="cmd cmd--pf" data-cmd="PF" title="Para frente (tecla ↑)"><b>PF</b><small>frente</small></button>
+        <button class="cmd cmd--pt" data-cmd="PT" title="Para trás (tecla ↓)"><b>PT</b><small>trás</small></button>
+        <button class="cmd cmd--pe" data-cmd="PE" title="Gira à esquerda (tecla ←)"><b>PE</b><small>esquerda</small></button>
+        <button class="cmd cmd--pd" data-cmd="PD" title="Gira à direita (tecla →)"><b>PD</b><small>direita</small></button>
+      </div>
+      <ol class="arena__programa" id="arena-programa" aria-label="Seu programa"></ol>
+      <div class="arena__controle">
+        <button class="btn btn--primary btn--sm" id="arena-executar">Executar</button>
+        <button class="btn btn--ghost btn--sm" id="arena-desfazer">Desfazer</button>
+        <button class="btn btn--ghost btn--sm" id="arena-limpar">Recomeçar</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section class="secao" id="servicos" aria-labelledby="servicos-titulo">
+  <h2 id="servicos-titulo">O que a EJR faz</h2>
+  <p class="secao__lead">Criamos e comercializamos recursos pedagógicos para atividades de programação e robótica, que podem ser usados nas diversas áreas do conhecimento.</p>
+  <!-- TODO EJR: um texto curto de cada serviço (o site atual só cita os nomes) -->
+  <ul class="servicos">
+    <li class="servico servico--orange"><h3>Aulas</h3><p>Robótica e programação na prática, com os kits e as plataformas da EJR.</p></li>
+    <li class="servico servico--green"><h3>Vendas</h3><p>Kits de robôs, placas, jogos de lógica e programação desplugada.</p></li>
+    <li class="servico servico--blue"><h3>Assessoria</h3><p>Apoio para a escola implantar robótica no seu projeto pedagógico.</p></li>
+    <li class="servico servico--ink"><h3>Formação</h3><p>Preparação de professores e instrutores para conduzir as atividades.</p></li>
+  </ul>
+</section>
+
+<!-- KITS -->
+<section class="secao secao--kits" id="kits" aria-labelledby="kits-titulo">
+  <div class="secao__cab">
+    <h2 id="kits-titulo">Kits</h2>
+    <div class="filtros" role="group" aria-label="Filtrar kits por tipo">
+      <button class="filtro is-on" data-filtro="todos" aria-pressed="true">Todos</button>
+      <button class="filtro" data-filtro="robo" aria-pressed="false">Robôs</button>
+      <button class="filtro" data-filtro="placa" aria-pressed="false">Placa</button>
+      <button class="filtro" data-filtro="jogo" aria-pressed="false">Jogos de lógica</button>
+      <button class="filtro" data-filtro="desplugado" aria-pressed="false">Desplugado</button>
+    </div>
+  </div>
+  <!-- TODO EJR: foto de cada kit, faixa etária e o que vem na caixa -->
+  <ul class="kits" id="kits-lista">
+    <li class="kit" data-tipo="robo"><div class="kit__fig kit__fig--robo" aria-hidden="true"></div><p class="kit__tipo">Robô educacional</p><h3>Jabuti Edu G3</h3><a class="kit__orc" data-kit="Kit Robô Educacional Jabuti Edu G3" href="#">Pedir orçamento</a></li>
+    <li class="kit" data-tipo="robo"><div class="kit__fig kit__fig--robo2" aria-hidden="true"></div><p class="kit__tipo">Robô educacional</p><h3>REPTO Mostrabot</h3><a class="kit__orc" data-kit="Kit Robô Educacional REPTO Mostrabot" href="#">Pedir orçamento</a></li>
+    <li class="kit" data-tipo="placa"><div class="kit__fig kit__fig--placa" aria-hidden="true"></div><p class="kit__tipo">Placa educacional</p><h3>PJE Maker 1</h3><a class="kit__orc" data-kit="Kit Placa Educacional PJE Maker 1" href="#">Pedir orçamento</a></li>
+    <li class="kit" data-tipo="jogo"><div class="kit__fig kit__fig--jogo" aria-hidden="true"></div><p class="kit__tipo">Tabuleiro com 3 jogos de lógica</p><h3>Logik 2406</h3><a class="kit__orc" data-kit="Kit Logik 2406" href="#">Pedir orçamento</a></li>
+    <li class="kit" data-tipo="robo"><div class="kit__fig kit__fig--sumo" aria-hidden="true"></div><p class="kit__tipo">Robô de sumô</p><h3>REPTO Sumô</h3><a class="kit__orc" data-kit="Kit Robô REPTO Sumô" href="#">Pedir orçamento</a></li>
+    <li class="kit" data-tipo="desplugado"><div class="kit__fig kit__fig--desplugado" aria-hidden="true"></div><p class="kit__tipo">Programação desplugada</p><h3>Primeiros Passos</h3><a class="kit__orc" data-kit="Kit Programação Desplugada - Primeiros Passos" href="#">Pedir orçamento</a></li>
+    <li class="kit" data-tipo="robo"><div class="kit__fig kit__fig--art" aria-hidden="true"></div><p class="kit__tipo">Robô educacional</p><h3>REPTO Art 10</h3><a class="kit__orc" data-kit="Kit Robô Educacional REPTO Art 10" href="#">Pedir orçamento</a></li>
+  </ul>
+</section>
+
+<!-- PLATAFORMAS -->
+<section class="secao" id="plataformas" aria-labelledby="plat-titulo">
+  <h2 id="plat-titulo">Plataformas</h2>
+  <p class="secao__lead">O kit continua depois da aula: cada plataforma leva a robótica para a tela, em casa ou na escola.</p>
+  <div class="plats">
+    <article class="plat plat--hub">
+      <img src="assets/img/hub.png" alt="Tela de abertura do EJR Hub" width="569" height="387" loading="lazy">
+      <div class="plat__txt">
+        <h3>EJR Hub</h3>
+        <p>Cada aluno é um inventor. A plataforma combina robótica, programação e jogos para transformar conteúdo da BNCC em aventuras: missões, conquistas, sequências e certificados. O instrutor tem planejamento, chamada e acompanhamento. A escola vê o progresso completo.</p>
+        <a class="btn btn--blue btn--sm" href="https://ejr-hub.vercel.app/" target="_blank" rel="noopener">Conhecer o EJR Hub</a>
+      </div>
+    </article>
+    <article class="plat">
+      <img src="assets/img/jabuti-nuvem.jpeg" alt="Ilustração da Plataforma Jabuti Edu Nuvem" width="600" height="488" loading="lazy">
+      <div class="plat__txt">
+        <h3>Jabuti Edu Nuvem</h3>
+        <p>Aprenda robótica e programação de forma divertida e dinâmica, em ambiente remoto, sozinho ou em grupo.</p>
+        <a class="btn btn--blue btn--sm" href="http://pje.ejrrobotica.com.br/" target="_blank" rel="noopener">Abrir a plataforma</a>
+      </div>
+    </article>
+    <article class="plat">
+      <img src="assets/img/amazonia.png" alt="Tela do jogo Barco Robô Amazônia, com o barco no rio e alvos nas margens" width="1024" height="591" loading="lazy">
+      <div class="plat__txt">
+        <h3>EJR Games</h3>
+        <p>Gamificação da robótica educacional. Lançamento: a Trilogia Barco Robô Amazônia, três games em que você navega pelos rios, ajuda indígenas e ribeirinhos, colhe, pesca, transporta e descobre os recursos que movimentam a cultura amazônica.</p>
+        <a class="btn btn--blue btn--sm" href="https://gamificacaodarobotica.online/" target="_blank" rel="noopener">Jogar no EJR Games</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- TURMA -->
+<figure class="turma">
+  <img src="assets/img/aula-full.jpg" alt="Robôs educacionais da EJR alinhados sobre a arena verde de competição" width="863" height="647" loading="lazy">
+  <figcaption>Os robôs da turma prontos na arena. <!-- TODO EJR: mais fotos de turma, com autorização de imagem --></figcaption>
+</figure>
+
+<!-- CONTATO -->
+<section class="secao contato" id="contato" aria-labelledby="contato-titulo">
+  <div class="contato__principal">
+    <h2 id="contato-titulo">Fale com a EJR</h2>
+    <p class="secao__lead">Quer levar robótica para a sua escola ou turma? Mande uma mensagem e solicite seu orçamento.</p>
+    <a class="btn btn--whats" href="https://wa.me/5551992921288?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20EJR%20Rob%C3%B3tica." target="_blank" rel="noopener">Conversar no WhatsApp</a>
+    <dl class="contato__lista">
+      <div><dt>WhatsApp, Telegram e telefone</dt><dd><a href="tel:+5551992921288">+55 (51) 9 9292-1288</a></dd></div>
+      <div><dt>E-mail</dt><dd><a href="mailto:contato@ejrrobotica.com.br">contato@ejrrobotica.com.br</a></dd></div>
+      <div><dt>Instagram</dt><dd><a href="http://www.instagram.com/ejr_robotica/" target="_blank" rel="noopener">@ejr_robotica</a></dd></div>
+      <div><dt>Facebook</dt><dd><a href="https://www.facebook.com/ejrrobotica" target="_blank" rel="noopener">@ejrrobotica</a></dd></div>
+    </dl>
+  </div>
+  <div class="contato__forms">
+    <h3>Formulários</h3>
+    <ul>
+      <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSd5mmaqlvDnthljoghdegoQn1d10idMAYgmbxagTqh3J-TDnQ/viewform" target="_blank" rel="noopener">Enviar trabalho</a></li>
+      <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSf8z4a0uHUgjiYvtIyHmeaIRW-n2Ki6AS9EKP_YH5_1KwSvow/viewform" target="_blank" rel="noopener">Avaliar o EJR Games</a></li>
+      <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfQ0Wcn-RnDj_lTGyGIW-y9ptM1P58YAn9OhNmIVsBGWY_LjQ/viewform" target="_blank" rel="noopener">Trabalhe conosco</a></li>
+      <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfwdPTjTM5VOW9HAqp-lUpoDYBlm7PyU8m6AoW-LSBdzH66gw/viewform" target="_blank" rel="noopener">EJR Promo</a></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="rodape">
+  <img src="assets/img/logo-600.png" alt="" width="150" height="76">
+  <p>© EJR Robótica Educacional. Todos os direitos reservados.</p>
+</footer>
+
+<script src="assets/js/arena.js"></script>
+</body>
+</html>
